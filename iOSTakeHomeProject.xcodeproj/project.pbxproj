@@ -21,6 +21,7 @@
 		8D4F579E2A6AB3E700CC43A4 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4F579D2A6AB3E700CC43A4 /* NetworkingManager.swift */; };
 		8D4F57A02A6B0B8D00CC43A4 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4F579F2A6B0B8D00CC43A4 /* PeopleViewModel.swift */; };
 		8D4F57A22A6B1B8A00CC43A4 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4F57A12A6B1B8A00CC43A4 /* DetailViewModel.swift */; };
+		8DA59AD92A6C6C7200559CEF /* CheckmarkPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA59AD82A6C6C7200559CEF /* CheckmarkPopoverView.swift */; };
 		8DBD826C2A66F9D500744214 /* iOSTakeHomeProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD826B2A66F9D500744214 /* iOSTakeHomeProjectApp.swift */; };
 		8DBD82702A66F9D600744214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBD826F2A66F9D600744214 /* Assets.xcassets */; };
 		8DBD82732A66F9D600744214 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBD82722A66F9D600744214 /* Preview Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		8D4F579D2A6AB3E700CC43A4 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		8D4F579F2A6B0B8D00CC43A4 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		8D4F57A12A6B1B8A00CC43A4 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		8DA59AD82A6C6C7200559CEF /* CheckmarkPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopoverView.swift; sourceTree = "<group>"; };
 		8DBD82682A66F9D500744214 /* iOSTakeHomeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTakeHomeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBD826B2A66F9D500744214 /* iOSTakeHomeProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTakeHomeProjectApp.swift; sourceTree = "<group>"; };
 		8DBD826F2A66F9D600744214 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				8D4F57942A69AE3200CC43A4 /* PillView.swift */,
+				8DA59AD82A6C6C7200559CEF /* CheckmarkPopoverView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DA59AD92A6C6C7200559CEF /* CheckmarkPopoverView.swift in Sources */,
 				8D2C7F292A697B8A0042F512 /* StaticJSONMapper.swift in Sources */,
 				8D4F57952A69AE3200CC43A4 /* PillView.swift in Sources */,
 				8DBD827B2A66FAE000744214 /* Symbols.swift in Sources */,
