@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8D096F692A6DAAA5006A2071 /* CreateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D096F682A6DAAA5006A2071 /* CreateValidator.swift */; };
+		8D096F6C2A6DB124006A2071 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D096F6B2A6DB124006A2071 /* HapticsManager.swift */; };
+		8D096F6E2A6DB2BC006A2071 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D096F6D2A6DB2BC006A2071 /* SettingsView.swift */; };
+		8D096F712A6DB42B006A2071 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D096F702A6DB42B006A2071 /* UserDefaultKeys.swift */; };
 		8D2C7F1D2A6978600042F512 /* UsersStaticData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D2C7F1C2A6978600042F512 /* UsersStaticData.json */; };
 		8D2C7F1F2A6978CE0042F512 /* SingleUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D2C7F1E2A6978CE0042F512 /* SingleUserData.json */; };
 		8D2C7F212A697A030042F512 /* UserDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C7F202A697A030042F512 /* UserDetailResponse.swift */; };
@@ -34,6 +37,9 @@
 
 /* Begin PBXFileReference section */
 		8D096F682A6DAAA5006A2071 /* CreateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateValidator.swift; sourceTree = "<group>"; };
+		8D096F6B2A6DB124006A2071 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		8D096F6D2A6DB2BC006A2071 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8D096F702A6DB42B006A2071 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		8D2C7F1C2A6978600042F512 /* UsersStaticData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UsersStaticData.json; sourceTree = "<group>"; };
 		8D2C7F1E2A6978CE0042F512 /* SingleUserData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SingleUserData.json; sourceTree = "<group>"; };
 		8D2C7F202A697A030042F512 /* UserDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailResponse.swift; sourceTree = "<group>"; };
@@ -77,6 +83,22 @@
 				8D096F682A6DAAA5006A2071 /* CreateValidator.swift */,
 			);
 			path = Validator;
+			sourceTree = "<group>";
+		};
+		8D096F6A2A6DB109006A2071 /* Haptics */ = {
+			isa = PBXGroup;
+			children = (
+				8D096F6B2A6DB124006A2071 /* HapticsManager.swift */,
+			);
+			path = Haptics;
+			sourceTree = "<group>";
+		};
+		8D096F6F2A6DB409006A2071 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				8D096F702A6DB42B006A2071 /* UserDefaultKeys.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 		8D2C7F1B2A6978170042F512 /* JSON */ = {
@@ -214,6 +236,8 @@
 		8DBD82832A67FC4B00744214 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				8D096F6F2A6DB409006A2071 /* UserDefaults */,
+				8D096F6A2A6DB109006A2071 /* Haptics */,
 				8D4F579C2A6AB3C500CC43A4 /* API */,
 				8D4F57932A69AE1F00CC43A4 /* Views */,
 				8D2C7F272A697B670042F512 /* Mapper */,
@@ -306,6 +330,7 @@
 		8DBD828F2A67FCE000744214 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8D096F6D2A6DB2BC006A2071 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -382,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D096F6E2A6DB2BC006A2071 /* SettingsView.swift in Sources */,
 				8DA59AD92A6C6C7200559CEF /* CheckmarkPopoverView.swift in Sources */,
 				8D2C7F292A697B8A0042F512 /* StaticJSONMapper.swift in Sources */,
 				8D4F57952A69AE3200CC43A4 /* PillView.swift in Sources */,
@@ -397,9 +423,11 @@
 				8D4F57922A69AD3C00CC43A4 /* PersonItemView.swift in Sources */,
 				8DE3CCEA2A6BFFA7005B0A54 /* NewPerson.swift in Sources */,
 				8D4F57A02A6B0B8D00CC43A4 /* PeopleViewModel.swift in Sources */,
+				8D096F712A6DB42B006A2071 /* UserDefaultKeys.swift in Sources */,
 				8D4F579B2A6AAEDC00CC43A4 /* CreateView.swift in Sources */,
 				8D096F692A6DAAA5006A2071 /* CreateValidator.swift in Sources */,
 				8D4F57A22A6B1B8A00CC43A4 /* DetailViewModel.swift in Sources */,
+				8D096F6C2A6DB124006A2071 /* HapticsManager.swift in Sources */,
 				8D2C7F262A697B270042F512 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
