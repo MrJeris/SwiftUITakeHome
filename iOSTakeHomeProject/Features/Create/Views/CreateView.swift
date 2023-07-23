@@ -9,15 +9,24 @@ import SwiftUI
 
 struct CreateView: View {
     @Environment(\.dismiss) private var dismiss
+    @FocusState private var focusedField: Field?
     @StateObject private var vm = CreateViewModel()
     let successfulAction: () -> Void
     
     var body: some View {
         NavigationView {
             Form {
-                firstname
-                lastname
-                job
+                Section {
+                    firstname
+                    lastname
+                    job
+                } footer: {
+                    if case .validation(let error) = vm.error,
+                       let errorDescription = error.errorDescription {
+                        Text(errorDescription)
+                            .foregroundColor(.red)
+                    }
+                }
                 
                 Section {
                     submit
@@ -37,7 +46,7 @@ struct CreateView: View {
                 }
             }
             .alert(isPresented: $vm.hasError, error: vm.error) {
-                Button("Retry") { }
+                Button("Ok") { }
             }
             .overlay {
                 if vm.state == .submitting {
@@ -45,6 +54,14 @@ struct CreateView: View {
                 }
             }
         }
+    }
+}
+
+extension CreateView {
+    enum Field: Hashable {
+        case firstName
+        case lastName
+        case job
     }
 }
 
@@ -63,18 +80,22 @@ private extension CreateView {
     
     var firstname: some View {
         TextField("First Name", text: $vm.person.firstName)
+            .focused($focusedField, equals: .firstName)
     }
     
     var lastname: some View {
         TextField("Last Name", text: $vm.person.lastName)
+            .focused($focusedField, equals: .lastName)
     }
     
     var job: some View {
         TextField("Job", text: $vm.person.job)
+            .focused($focusedField, equals: .job)
     }
     
     var submit: some View {
         Button("Submit") {
+            focusedField = nil
             vm.create()
         }
     }
