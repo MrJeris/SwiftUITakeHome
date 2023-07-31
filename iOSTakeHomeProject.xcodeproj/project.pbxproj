@@ -27,6 +27,7 @@
 		8D4F57A02A6B0B8D00CC43A4 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4F579F2A6B0B8D00CC43A4 /* PeopleViewModel.swift */; };
 		8D4F57A22A6B1B8A00CC43A4 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4F57A12A6B1B8A00CC43A4 /* DetailViewModel.swift */; };
 		8D9167D82A767EAD00D602D2 /* JSONMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9167D72A767EAD00D602D2 /* JSONMapperTests.swift */; };
+		8D9167DB2A77E1F100D602D2 /* CreateFormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9167DA2A77E1F100D602D2 /* CreateFormValidatorTests.swift */; };
 		8DA59AD92A6C6C7200559CEF /* CheckmarkPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA59AD82A6C6C7200559CEF /* CheckmarkPopoverView.swift */; };
 		8DBD826C2A66F9D500744214 /* iOSTakeHomeProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD826B2A66F9D500744214 /* iOSTakeHomeProjectApp.swift */; };
 		8DBD82702A66F9D600744214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBD826F2A66F9D600744214 /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		8D4F57A12A6B1B8A00CC43A4 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		8D9167CD2A767E7B00D602D2 /* iOSTakeHomeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTakeHomeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9167D72A767EAD00D602D2 /* JSONMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapperTests.swift; sourceTree = "<group>"; };
+		8D9167DA2A77E1F100D602D2 /* CreateFormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFormValidatorTests.swift; sourceTree = "<group>"; };
 		8DA59AD82A6C6C7200559CEF /* CheckmarkPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopoverView.swift; sourceTree = "<group>"; };
 		8DBD82682A66F9D500744214 /* iOSTakeHomeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTakeHomeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBD826B2A66F9D500744214 /* iOSTakeHomeProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTakeHomeProjectApp.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		8D9167CE2A767E7B00D602D2 /* iOSTakeHomeProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				8D9167D92A77E1A200D602D2 /* Form */,
 				8D9167D62A767E9900D602D2 /* Mapper */,
 			);
 			path = iOSTakeHomeProjectTests;
@@ -180,6 +183,14 @@
 				8D9167D72A767EAD00D602D2 /* JSONMapperTests.swift */,
 			);
 			path = Mapper;
+			sourceTree = "<group>";
+		};
+		8D9167D92A77E1A200D602D2 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				8D9167DA2A77E1F100D602D2 /* CreateFormValidatorTests.swift */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 		8DBD825F2A66F9D500744214 = {
@@ -478,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D9167DB2A77E1F100D602D2 /* CreateFormValidatorTests.swift in Sources */,
 				8D9167D82A767EAD00D602D2 /* JSONMapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
