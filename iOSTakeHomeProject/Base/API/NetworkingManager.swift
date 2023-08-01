@@ -12,7 +12,8 @@ final class NetworkingManager {
     
     private init() {}
     
-    func request<T: Codable>(_ endpoint: Endpoint,
+    func request<T: Codable>(session: URLSession = .shared,
+                             _ endpoint: Endpoint,
                              type: T.Type) async throws -> T {
         
         guard let url = endpoint.url else {
@@ -21,7 +22,7 @@ final class NetworkingManager {
         
         var request = buildRequest(from: url, methodType: endpoint.methodType)
         
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let (data, response) = try await session.data(for: request)
         
         guard let response = response as? HTTPURLResponse, (200...300) ~= response.statusCode else {
             let statusCode = (response as! HTTPURLResponse).statusCode
@@ -36,7 +37,7 @@ final class NetworkingManager {
         return res
     }
     
-    func request(_ endpoint: Endpoint) async throws {
+    func request(session: URLSession = .shared, _ endpoint: Endpoint) async throws {
         
         guard let url = endpoint.url else {
             throw NetworkingError.invalidUrl
@@ -44,7 +45,7 @@ final class NetworkingManager {
         
         var request = buildRequest(from: url, methodType: endpoint.methodType)
         
-        let (_, response) = try await URLSession.shared.data(for: request)
+        let (_, response) = try await session.data(for: request)
         
         guard let response = response as? HTTPURLResponse, (200...300) ~= response.statusCode else {
             let statusCode = (response as! HTTPURLResponse).statusCode
@@ -61,6 +62,25 @@ extension NetworkingManager {
         case invalidStatusCode(statusCode: Int)
         case invalidData
         case failedToDecode(error: Error)
+    }
+}
+
+extension NetworkingManager.NetworkingError: Equatable {
+    static func == (lhs: NetworkingManager.NetworkingError, rhs: NetworkingManager.NetworkingError) -> Bool {
+        switch(lhs, rhs) {
+        case (.invalidUrl, .invalidUrl):
+            return true
+        case (.custom(let lhsType), .custom(let rhsType)):
+            return lhsType.localizedDescription == rhsType.localizedDescription
+        case (.invalidStatusCode(let lhsType), .invalidStatusCode(let rhsType)):
+            return lhsType == rhsType
+        case (.invalidData, .invalidData):
+            return true
+        case (.failedToDecode(let lhsType), .failedToDecode(let rhsType)):
+            return lhsType.localizedDescription == rhsType.localizedDescription
+        default:
+            return false
+        }
     }
 }
 
