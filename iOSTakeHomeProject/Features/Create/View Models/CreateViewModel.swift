@@ -13,7 +13,14 @@ final class CreateViewModel: ObservableObject {
     @Published private(set) var error: FormError?
     @Published var hasError = false
     
-    private let validator = CreateValidator()
+    private let networkingManager: NetworkingManagerImpl!
+    private let validator: CreateValidatorImpl!
+    
+    init(networkingManager: NetworkingManagerImpl = NetworkingManager.shared,
+         validator: CreateValidatorImpl = CreateValidator()) {
+        self.networkingManager = networkingManager
+        self.validator = validator
+    }
     
     @MainActor
     func create() async {
@@ -26,7 +33,7 @@ final class CreateViewModel: ObservableObject {
             encoder.keyEncodingStrategy = .convertToSnakeCase
             let data = try encoder.encode(person)
             
-            try await NetworkingManager.shared.request(.create(submissionData: data))
+            try await networkingManager.request(session: .shared, .create(submissionData: data))
             
             state = .successful
             
@@ -68,6 +75,21 @@ extension CreateViewModel.FormError {
             return error.errorDescription
         case.systemError(let error):
             return error.localizedDescription
+        }
+    }
+}
+
+extension CreateViewModel.FormError: Equatable {
+    static func == (lhs: CreateViewModel.FormError, rhs: CreateViewModel.FormError) -> Bool {
+        switch (lhs, rhs) {
+        case (.networking(let lhsType), .networking(let rhsType)):
+            return lhsType.errorDescription == rhsType.errorDescription
+        case (.validation(let lhsType), .validation(let rhsType)):
+            return lhsType.errorDescription == rhsType.errorDescription
+        case (.systemError(let lhsType), .networking(let rhsType)):
+            return lhsType.localizedDescription == rhsType.localizedDescription
+        default:
+            return false
         }
     }
 }
