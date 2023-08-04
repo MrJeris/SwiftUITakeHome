@@ -12,6 +12,10 @@
 		8D096F6E2A6DB2BC006A2071 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D096F6D2A6DB2BC006A2071 /* SettingsView.swift */; };
 		8D096F712A6DB42B006A2071 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D096F702A6DB42B006A2071 /* UserDefaultKeys.swift */; };
 		8D096F732A6DB793006A2071 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D096F722A6DB793006A2071 /* Endpoint.swift */; };
+		8D2A52852A7D5EE300386B04 /* NetworkingManagerUserDetailsResponseSuccessMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A52842A7D5EE300386B04 /* NetworkingManagerUserDetailsResponseSuccessMock.swift */; };
+		8D2A52872A7D60C200386B04 /* NetworkingManagerUserDetailsResponseFailureMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A52862A7D60C200386B04 /* NetworkingManagerUserDetailsResponseFailureMock.swift */; };
+		8D2A528A2A7D612E00386B04 /* DetailsViewModelSuccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A52892A7D612E00386B04 /* DetailsViewModelSuccessTests.swift */; };
+		8D2A528C2A7D667200386B04 /* DetailsViewModelFailureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A528B2A7D667200386B04 /* DetailsViewModelFailureTests.swift */; };
 		8D2C7F1D2A6978600042F512 /* UsersStaticData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D2C7F1C2A6978600042F512 /* UsersStaticData.json */; };
 		8D2C7F1F2A6978CE0042F512 /* SingleUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D2C7F1E2A6978CE0042F512 /* SingleUserData.json */; };
 		8D2C7F212A697A030042F512 /* UserDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C7F202A697A030042F512 /* UserDetailResponse.swift */; };
@@ -61,6 +65,10 @@
 		8D096F6D2A6DB2BC006A2071 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8D096F702A6DB42B006A2071 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		8D096F722A6DB793006A2071 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		8D2A52842A7D5EE300386B04 /* NetworkingManagerUserDetailsResponseSuccessMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManagerUserDetailsResponseSuccessMock.swift; sourceTree = "<group>"; };
+		8D2A52862A7D60C200386B04 /* NetworkingManagerUserDetailsResponseFailureMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManagerUserDetailsResponseFailureMock.swift; sourceTree = "<group>"; };
+		8D2A52892A7D612E00386B04 /* DetailsViewModelSuccessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelSuccessTests.swift; sourceTree = "<group>"; };
+		8D2A528B2A7D667200386B04 /* DetailsViewModelFailureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelFailureTests.swift; sourceTree = "<group>"; };
 		8D2C7F1C2A6978600042F512 /* UsersStaticData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UsersStaticData.json; sourceTree = "<group>"; };
 		8D2C7F1E2A6978CE0042F512 /* SingleUserData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SingleUserData.json; sourceTree = "<group>"; };
 		8D2C7F202A697A030042F512 /* UserDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailResponse.swift; sourceTree = "<group>"; };
@@ -139,6 +147,33 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
+		8D2A52822A7D5E7F00386B04 /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8D2A52842A7D5EE300386B04 /* NetworkingManagerUserDetailsResponseSuccessMock.swift */,
+				8D2A52862A7D60C200386B04 /* NetworkingManagerUserDetailsResponseFailureMock.swift */,
+			);
+			path = UserDetails;
+			sourceTree = "<group>";
+		};
+		8D2A52832A7D5E8800386B04 /* UserResponse */ = {
+			isa = PBXGroup;
+			children = (
+				8D321F2D2A7AF3B3000AF9EF /* NetworkingManagerUserResponseSuccessMock.swift */,
+				8D321F312A7AF9BA000AF9EF /* NetworkingManagerUserResponseFailureMock.swift */,
+			);
+			path = UserResponse;
+			sourceTree = "<group>";
+		};
+		8D2A52882A7D610D00386B04 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				8D2A52892A7D612E00386B04 /* DetailsViewModelSuccessTests.swift */,
+				8D2A528B2A7D667200386B04 /* DetailsViewModelFailureTests.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		8D2C7F1B2A6978170042F512 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,8 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				8D2FA8EF2A79725800D2FD42 /* MockURLSessionProtocol.swift */,
-				8D321F2D2A7AF3B3000AF9EF /* NetworkingManagerUserResponseSuccessMock.swift */,
-				8D321F312A7AF9BA000AF9EF /* NetworkingManagerUserResponseFailureMock.swift */,
+				8D2A52822A7D5E7F00386B04 /* UserDetails */,
+				8D2A52832A7D5E8800386B04 /* UserResponse */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -230,6 +265,7 @@
 		8D9167CE2A767E7B00D602D2 /* iOSTakeHomeProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				8D2A52882A7D610D00386B04 /* Details */,
 				8D321F2A2A7AF21D000AF9EF /* People */,
 				8D2FA8EA2A796A1800D2FD42 /* Networking */,
 				8D9167D92A77E1A200D602D2 /* Form */,
@@ -552,11 +588,15 @@
 			files = (
 				8D321F302A7AF97C000AF9EF /* PeopleViewModelFailureTests.swift in Sources */,
 				8D2FA8F32A79745800D2FD42 /* NetworkingManagerTests.swift in Sources */,
+				8D2A528C2A7D667200386B04 /* DetailsViewModelFailureTests.swift in Sources */,
+				8D2A52852A7D5EE300386B04 /* NetworkingManagerUserDetailsResponseSuccessMock.swift in Sources */,
 				8D321F2E2A7AF3B3000AF9EF /* NetworkingManagerUserResponseSuccessMock.swift in Sources */,
 				8D9167DB2A77E1F100D602D2 /* CreateFormValidatorTests.swift in Sources */,
 				8D321F322A7AF9BA000AF9EF /* NetworkingManagerUserResponseFailureMock.swift in Sources */,
 				8D9167D82A767EAD00D602D2 /* JSONMapperTests.swift in Sources */,
+				8D2A528A2A7D612E00386B04 /* DetailsViewModelSuccessTests.swift in Sources */,
 				8D321F2C2A7AF259000AF9EF /* PeopleViewModelSuccessTests.swift in Sources */,
+				8D2A52872A7D60C200386B04 /* NetworkingManagerUserDetailsResponseFailureMock.swift in Sources */,
 				8D2FA8F02A79725800D2FD42 /* MockURLSessionProtocol.swift in Sources */,
 				8D2FA8ED2A796A5600D2FD42 /* NetworkingEndpointTests.swift in Sources */,
 			);
