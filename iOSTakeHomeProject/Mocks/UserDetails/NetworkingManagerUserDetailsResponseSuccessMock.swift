@@ -1,17 +1,18 @@
 //
-//  NetworkingManagerCreateSuccessMock.swift
+//  NetworkingManagerUserDetailsResponseSuccessMock.swift
 //  iOSTakeHomeProjectTests
 //
 //  Created by Ruslan Magomedov on 04.08.2023.
 //
 
+#if DEBUG
 import Foundation
-@testable import iOSTakeHomeProject
 
-class NetworkingManagerCreateSuccessMock: NetworkingManagerImpl {
+class NetworkingManagerUserDetailsResponseSuccessMock: NetworkingManagerImpl {
     func request<T>(session: URLSession, _ endpoint: iOSTakeHomeProject.Endpoint, type: T.Type) async throws -> T where T : Decodable, T : Encodable {
-        return Data() as! T
+        return try StaticJSONMapper.decode(file: "SingleUserData", type: UserDetailResponse.self) as! T
     }
     
     func request(session: URLSession, _ endpoint: iOSTakeHomeProject.Endpoint) async throws {  }
 }
+#endif

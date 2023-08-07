@@ -14,7 +14,7 @@ final class DetailsViewModelSuccessTests: XCTestCase {
     private var vm: DetailViewModel!
     
     override func setUp() {
-        networkingMock = NetworkingManagerUserResponseSuccessMock()
+        networkingMock = NetworkingManagerUserDetailsResponseSuccessMock()
         vm = DetailViewModel(networkingManager: networkingMock)
     }
     
