@@ -55,6 +55,8 @@
 		8DBD827B2A66FAE000744214 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD827A2A66FAE000744214 /* Symbols.swift */; };
 		8DBD827D2A67FB5000744214 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD827C2A67FB5000744214 /* Theme.swift */; };
 		8DD8E31F2A818BAB001A90CE /* PeopleFailureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8E31E2A818BAB001A90CE /* PeopleFailureUITests.swift */; };
+		8DD8E3222A82B9E8001A90CE /* DetailsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8E3212A82B9E8001A90CE /* DetailsUITests.swift */; };
+		8DD8E3242A82BEBB001A90CE /* DetailsFailureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD8E3232A82BEBB001A90CE /* DetailsFailureUITests.swift */; };
 		8DE3CCEA2A6BFFA7005B0A54 /* NewPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3CCE92A6BFFA7005B0A54 /* NewPerson.swift */; };
 		8DE3CCEC2A6C001C005B0A54 /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3CCEB2A6C001C005B0A54 /* CreateViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -129,6 +131,8 @@
 		8DBD827C2A67FB5000744214 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		8DBD82902A67FDCB00744214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8DD8E31E2A818BAB001A90CE /* PeopleFailureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFailureUITests.swift; sourceTree = "<group>"; };
+		8DD8E3212A82B9E8001A90CE /* DetailsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUITests.swift; sourceTree = "<group>"; };
+		8DD8E3232A82BEBB001A90CE /* DetailsFailureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsFailureUITests.swift; sourceTree = "<group>"; };
 		8DE3CCE92A6BFFA7005B0A54 /* NewPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPerson.swift; sourceTree = "<group>"; };
 		8DE3CCEB2A6C001C005B0A54 /* CreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -338,6 +342,7 @@
 		8DB8E7842A817246000DA719 /* iOSTakeHomeProjectUITests */ = {
 			isa = PBXGroup;
 			children = (
+				8DD8E3202A82B9C9001A90CE /* Details */,
 				8DB8E78E2A817307000DA719 /* People */,
 			);
 			path = iOSTakeHomeProjectUITests;
@@ -579,6 +584,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		8DD8E3202A82B9C9001A90CE /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				8DD8E3212A82B9E8001A90CE /* DetailsUITests.swift */,
+				8DD8E3232A82BEBB001A90CE /* DetailsFailureUITests.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -731,6 +745,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DB8E7902A81732B000DA719 /* PeopleScreenUITests.swift in Sources */,
+				8DD8E3242A82BEBB001A90CE /* DetailsFailureUITests.swift in Sources */,
+				8DD8E3222A82B9E8001A90CE /* DetailsUITests.swift in Sources */,
 				8DD8E31F2A818BAB001A90CE /* PeopleFailureUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
