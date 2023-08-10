@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D050B522A851F00006FDC32 /* CreateScreenUIValidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D050B512A851F00006FDC32 /* CreateScreenUIValidTests.swift */; };
+		8D050B542A852266006FDC32 /* CreateScreenFormValidationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D050B532A852266006FDC32 /* CreateScreenFormValidationUITests.swift */; };
+		8D050B562A852C43006FDC32 /* CreateFailureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D050B552A852C43006FDC32 /* CreateFailureUITests.swift */; };
+		8D050B582A852F2F006FDC32 /* CreateScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D050B572A852F2F006FDC32 /* CreateScreenUITests.swift */; };
 		8D096F692A6DAAA5006A2071 /* CreateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D096F682A6DAAA5006A2071 /* CreateValidator.swift */; };
 		8D096F6C2A6DB124006A2071 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D096F6B2A6DB124006A2071 /* HapticsManager.swift */; };
 		8D096F6E2A6DB2BC006A2071 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D096F6D2A6DB2BC006A2071 /* SettingsView.swift */; };
@@ -79,6 +83,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D050B512A851F00006FDC32 /* CreateScreenUIValidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreenUIValidTests.swift; sourceTree = "<group>"; };
+		8D050B532A852266006FDC32 /* CreateScreenFormValidationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreenFormValidationUITests.swift; sourceTree = "<group>"; };
+		8D050B552A852C43006FDC32 /* CreateFailureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFailureUITests.swift; sourceTree = "<group>"; };
+		8D050B572A852F2F006FDC32 /* CreateScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreenUITests.swift; sourceTree = "<group>"; };
 		8D096F682A6DAAA5006A2071 /* CreateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateValidator.swift; sourceTree = "<group>"; };
 		8D096F6B2A6DB124006A2071 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		8D096F6D2A6DB2BC006A2071 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -162,6 +170,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D050B502A851ED9006FDC32 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				8D050B512A851F00006FDC32 /* CreateScreenUIValidTests.swift */,
+				8D050B532A852266006FDC32 /* CreateScreenFormValidationUITests.swift */,
+				8D050B552A852C43006FDC32 /* CreateFailureUITests.swift */,
+				8D050B572A852F2F006FDC32 /* CreateScreenUITests.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
 		8D096F672A6DAA8D006A2071 /* Validator */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +361,7 @@
 		8DB8E7842A817246000DA719 /* iOSTakeHomeProjectUITests */ = {
 			isa = PBXGroup;
 			children = (
+				8D050B502A851ED9006FDC32 /* Create */,
 				8DD8E3202A82B9C9001A90CE /* Details */,
 				8DB8E78E2A817307000DA719 /* People */,
 			);
@@ -744,9 +764,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D050B542A852266006FDC32 /* CreateScreenFormValidationUITests.swift in Sources */,
+				8D050B582A852F2F006FDC32 /* CreateScreenUITests.swift in Sources */,
+				8D050B522A851F00006FDC32 /* CreateScreenUIValidTests.swift in Sources */,
 				8DB8E7902A81732B000DA719 /* PeopleScreenUITests.swift in Sources */,
 				8DD8E3242A82BEBB001A90CE /* DetailsFailureUITests.swift in Sources */,
 				8DD8E3222A82B9E8001A90CE /* DetailsUITests.swift in Sources */,
+				8D050B562A852C43006FDC32 /* CreateFailureUITests.swift in Sources */,
 				8DD8E31F2A818BAB001A90CE /* PeopleFailureUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
